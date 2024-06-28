@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}   
+body{
+    background-image: url(car2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.table{
+    display: flex;
+    width: 100vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.col2{
+    margin-top: 70px;
+}
+.col3{
+    margin-top: 209px;
+}
+.box{
+    color: white;
+    display: block;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    padding: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.red{
+    background-color: rgba(226, 29, 29, 0.753);   
+}
+.navy{
+    background-color: rgb(35, 116, 141);
+}
+.skyblue{
+    background-color: rgba(21, 211, 244, 0.934);
+}
+.lightgreen{
+    background-color: rgba(115, 247, 124, 0.719);
+}
+.green{
+    background-color: rgb(5, 196, 78);
+}
+.blue{
+    background-color: rgba(0, 68, 73, 0.979);
+}
+.brown{
+    background-color: #924d04;
+}
+.orange{
+    background-color: rgba(255, 183, 50, 0.906);
+}
+.red{
+    background-color: rgb(255, 60, 0);
+}
+.darkorange{
+    background-color: rgb(168, 166, 3);
+}
+.pink{
+    background-color: rgb(175, 30, 144);
+}
+.font{
+    font-size: small;
+}
+.container{
+    margin-left: 5px;
+    width: 240px;
+    height: 30px;
+    margin-bottom: 5px;
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+.footer{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 80px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.box1{
+    color: white;
+    display: block;
+    width: 108px;
+    height: 60px;
+    text-align: center;
+    padding: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+@media screen and (max-width:900px){
+    body{
+        display: none;
+    }
+}

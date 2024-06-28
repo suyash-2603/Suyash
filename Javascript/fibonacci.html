@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 14 Q1</title>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <button type="button" onclick="Fibonacci()">Click here</button>
+    <script>
+        function Fibonacci(){
+            var n = prompt("Enter the range:");
+            var f1 = 0;
+            var f2 = 1;
+            var f3;
+            document.write("Fibonacci Series:<br>");
+            for(i=1;i<=n;i++){
+                f3 = f1 + f2;
+                f1 = f2;
+                f2 = f3;
+                document.write(f3+"  ")
+            }
+        }
+    </script>
+</body>
+</html>

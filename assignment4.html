@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            background-color: rgb(12, 5, 52);
+            color: white;
+            width: 40vw;
+            height: 150vh;
+            margin-left: 25%;
+            margin-top: 10px;
+            padding: 30px;
+        }
+
+        .container h1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .container p{
+            text-align: center;
+            font-style: italic;
+        }
+
+        button{
+            width: 10vw;
+            background-color: rgba(19, 19, 145, 0.838);
+            color: white;
+        }
+
+        label{
+            font-family: calibri, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Client Survey Form</h1>
+        <p>Thank you for taking the time to help us improve our service</p>
+        
+        <form>
+
+            <br><label>Name</label><br>
+            <input type="text" placeholder="Enter your name" size="50px"><br><br>
+
+            <label>Email</label><br>
+            <input type="email" placeholder="Enter your mail" size="50px"><br><br>
+
+            <label>Age</label><br>
+            <input type="number" placeholder="Enter your age" size="50px"><br><br>
+
+            <label>How did you heard about us?</label><br>
+            <select>
+                <option>Select one</option>
+                <option>By social media</option>
+                <option>By friend</option>
+                <option>By institute</option>
+                <option>By advertising</option>
+            </select><br><br>
+
+            <label>Would you recommend us to your friend?</label><br>
+            <input type="radio" id="recommend-1" name="recommend">Yes
+            <input type="radio" id="recommend-2" name="recommend">No<br><br>
+
+            <label>What would you like us to improve?</label><br>
+            <input type="checkbox">Customer service<br>
+            <input type="checkbox">Features<br>
+            <input type="checkbox">Discounts<br><br>
+
+            <label>Any more comments or suggestions about us</label><br>
+            <textarea cols="50" rows="7" placeholder="Dont be shy :)"></textarea><br><br>
+            <center>
+               <button>Submit</button>
+            </center>
+        </form>
+    </div>
+</body>
+</html>

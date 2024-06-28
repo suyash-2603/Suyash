@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Decimal to Binary Converter</h2>
+        <input type="number" id="decimalInput" placeholder="Enter decimal number" min="0">
+        <button onclick="convertDecimalToBinary()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // JavaScript code for decimal to binary conversion
+        function convertDecimalToBinary() {
+            const decimalInput = document.getElementById('decimalInput').value.trim();
+
+            // Check if the input is a valid non-negative integer
+            if (isNaN(decimalInput) || decimalInput < 0 || !Number.isInteger(parseFloat(decimalInput))) {
+                document.getElementById('result').innerHTML = "Invalid input. Please enter a non-negative integer.";
+                return;
+            }
+
+            let decimal = parseInt(decimalInput);
+            let binary = '';
+
+            // Base case: if the number is 0, its binary representation is 0
+            if (decimal === 0) {
+                binary = '0';
+            } else {
+                // Convert decimal to binary
+                while (decimal > 0) {
+                    binary = (decimal % 2) + binary;
+                    decimal = Math.floor(decimal / 2);
+                }
+            }
+
+            // Display the result
+            document.getElementById('result').innerHTML = `Binary equivalent: ${binary}`;
+        }
+    </script>
+</body>
+</html>

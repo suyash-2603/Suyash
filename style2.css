@@ -1,0 +1,30 @@
+.content1{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.upper{
+    color:rgb(59, 58, 58);
+}
+.lower{
+    
+    color: black;
+}
+select{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align : center;
+}
+.abc{
+    background-color: rgb(44, 44, 185);
+    color:snow;
+}
+.xyz{
+    background-color: aqua;
+    color: rgb(27, 143, 89);
+}
+table{
+    width:100%;
+}

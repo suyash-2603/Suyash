@@ -1,0 +1,25 @@
+.content2{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: rgb(22, 22, 79);
+    text-align: center;
+}
+.content3{
+    background-color: rgb(21, 210, 194);
+    color:rgb(66, 128, 5)
+}
+li {
+    margin-right: 15px;
+}
+
+a {
+     text-decoration: none;
+    color: #f5eded; 
+}
+
+a:hover {
+    background-color: rgb(106, 106, 248);
+    color: #eddfdf;
+}

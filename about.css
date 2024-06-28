@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: rgb(41, 175, 8);
+    color: rgb(243, 7, 7);
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50px;
+    width: 1245px;
+}
+.navbar li{
+    display: inline;
+    margin-left: 20px;
+}
+.navbar ul{
+    padding-top: 10px;
+    float: right;
+}
+.logo{
+    float: left;
+    font-size: xx-large;
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 40px;
+    border: 5px solid black;
+    border-radius: 35px;
+    text-align: center;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none; 
+}
+.navbar li a:hover{
+    color:blue
+}
+.search{
+    display: inline;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.search input{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+button a{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.container{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 25px;
+    width: 1213px;
+}
+.text h1{
+    font-size: large;
+}
+.text{
+    margin-bottom: 10px;
+}
+.symbol{
+    margin-left: 20px;
+}
+.symbol i{
+    margin-left: 20px;
+    background-color: white;
+    color:red;
+    border-radius: 5px;
+}
+.link ul li{
+    list-style: none;
+    font-style: normal;
+    color: rgb(170, 177, 177);
+}
+.link li h1{
+    font-size: large;
+    margin-bottom: 10px;
+    color: white;
+}
+.new h1{
+    font-size: large;
+    margin-bottom: 10px;
+}
+.new input{
+    width: 250px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+#button{
+    background-color: rgba(162, 239, 19, 0.865);
+    color:aqua;
+    font-family: Calibri,'Gill Sans', 'Gill Sans MT';
+    border: 0px;
+    border-radius: 5px;
+}
+.bar{
+    background-color: rgba(39, 36, 36, 0.906);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    width: 1243px;
+}
+.item ul li{
+    display: inline;
+    font-family: Calibri,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin-left: 10px;
+}
+.container1{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 1263px;
+    
+}
+.me{
+    background-color: rgb(127, 47, 255);
+    width: 350px;
+    height: 500px;
+    padding: 20px;
+    display: inline-block;
+}
+.name{
+    
+    color: black;
+    width: 300px;
+}
+.me img{
+    border-radius: 50%;
+    border: 10px solid white;
+}
+.about{
+    margin-left: 10px;
+    background-color: rgb(154, 3, 20);
+    padding: 10px;
+}
+.about h1{
+    background-color: greenyellow;
+    margin-bottom: 10px;
+}
+.content{
+    color: white;
+    font-size: larger;
+}
+@media screen and (max-width:900px) and (min-width:600px){
+    .navbar{
+        background-color: rgb(255, 2, 19);
+        color: rgb(3, 3, 3);
+        padding: 10px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        height: 50px;
+        width: 1175px;
+    }
+    .container{
+        background-color: rgb(249, 0, 0);
+        color: rgb(9, 9, 9);
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 25px;
+        width: 1150px;
+        font-size: small;
+    }
+    .container1{
+        display: grid;
+        width: 1200px;
+    }
+    .bar{
+        background-color: rgba(39, 36, 36, 0.906);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding:10px;
+        width: 1200px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px) and (min-width:300px){
+    .navbar{
+        background-color: rgb(255, 2, 19);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        height: 50px;
+        width: 600px;
+    }
+    .me{
+    background-color: greenyellow;
+    width: 550px;
+    margin-left: 20px;
+    height: 500px;
+    display: inline-block;
+}
+.about{
+    background-color: purple;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 580px;
+}
+    .container1{
+        display: inline;
+        width: 600px;
+    }
+    .container{
+        background-color: rgb(249, 0, 0);
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 25px;
+        width: 600px;
+        font-size: 10px;
+    }
+    .bar{
+        background-color: rgba(39, 36, 36, 0.906);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding:10px;
+        width: 630px;
+        font-size: 10px;
+    }
+}

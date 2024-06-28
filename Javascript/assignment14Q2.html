@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary to Decimal Converter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    input {
+        padding: 8px;
+        margin: 10px;
+        width: 200px;
+        font-size: 18px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    #result {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Binary to Decimal Converter</h2>
+    <input type="text" id="binaryInput" placeholder="Enter binary number">
+    <button onclick="convertBinaryToDecimal()">Convert</button>
+    <div id="result"></div>
+
+    <script>
+        function convertBinaryToDecimal() {
+            var binaryInput = document.getElementById("binaryInput").value;
+
+            // Validate binary input (allow only 0s and 1s)
+            if (/^[01]+$/.test(binaryInput) === false) {
+                alert("Please enter a valid binary number (0s and 1s only).");
+                return;
+            }
+
+            // Convert binary to decimal
+            var decimalResult = parseInt(binaryInput, 2);
+
+            // Display the result
+            document.getElementById("result").innerText = `Decimal equivalent: ${decimalResult}`;
+        }
+    </script>
+</body>
+</html>

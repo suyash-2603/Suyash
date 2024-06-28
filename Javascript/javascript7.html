@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 7</title>
+    <style>
+        .small{
+          height: 300px;
+          width: 350px;   
+        }
+        .large{
+            height: 600px;
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="car2.jpg"></center>
+    
+    <script>
+        document.getElementsByTagName("img")[0].onmouseenter = function (){
+            big()
+        };
+        function big(){
+            document.getElementsByTagName("img")[0].classList.remove("small")
+            document.getElementsByTagName("img")[0].classList.add("large")
+        }
+        document.getElementsByTagName("img")[0].onmouseout = function (){
+            small()
+        };
+        function small(){
+            document.getElementsByTagName("img")[0].classList.remove("large")
+            document.getElementsByTagName("img")[0].classList.add("small")
+        }
+    </script>
+</body>
+</html>

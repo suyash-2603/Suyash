@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0;
+}
+@keyframes rotate {
+    0%{
+        transform:rotate(90deg);
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+    
+}
+.rotate{
+    background-color: blueviolet;
+
+}

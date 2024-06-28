@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+<body>
+    <script>
+        function getPermutations(string) {
+    if (string.length < 2) {
+        return [string];
+    }
+    let permutations = [];
+    for (let i = 0; i < string.length; i++) {
+        let char = string[i];
+        // Skip duplicate characters
+        if (string.indexOf(char) !== i) {
+            continue;
+        }
+        let remainingString = string.slice(0, i) + string.slice(i + 1, string.length);
+        for (let subPermutation of getPermutations(remainingString)) {
+            permutations.push(char + subPermutation);
+        }
+    }
+    return permutations;
+}
+         // Example usage:
+        const string = "abc";
+        const permutations = getPermutations(string);
+        document.write(permutations);
+    </script>
+</body>
+</html>

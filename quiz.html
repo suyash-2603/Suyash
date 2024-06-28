@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .title{
+            background-color: cyan;
+        
+        }
+        body{
+            background-color: rgb(2, 2, 67);
+        }
+        .content{
+            text-align: center; 
+            color: white;
+        }
+        .quiz{
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            margin: 50px auto 0;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .quizdata{
+            padding: 20px 0;
+        }
+        .quizdata h2{
+            font-size: 18px;
+        }
+        .btn{
+            background-color: white;
+            color: #070707;
+            font-weight: 500;
+            width: 100%;
+            border: 1px solid;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover:not([disabled]){
+            background-color: #222;
+            color:white;
+        }
+        .btn:disabled{
+            cursor: no-drop;
+        }
+        #nxt-btn{
+            background-color: rgb(96, 220, 33);
+            color: white;
+            font-weight: 500;
+            border: 0;
+            width: 150px;
+            padding: 10px;
+            margin: 20px auto 0;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        .correct{
+            background-color: rgb(90, 177, 2);
+        }
+        .incorrect{
+            background-color: rgb(255, 53, 53);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1 align="center">Kya Aap Banenge Crorepati ?</h1>
+    </div>
+    <div class="content">
+        <p>This is Basic Quiz based on HTML , Javascript , CSS and Bootstrap.</p>
+    </div>
+    <div class="quiz">
+        <div class="quizdata">
+            <h2 id="question">This is Quiz question</h2>
+            <div id="ans-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="nxt-btn">Next</button>
+        </div>
+    </div>
+    <script>
+        const Questions = [
+            {
+                question:"What does HTML stand for ?",
+                answers:[
+                    {text: "Hyper Text Markup Language" , correct: true},
+                    {text: "High Text Markup Language" , correct: false},
+                    {text: "Hyper Tabular Markup Language" , correct: false},
+                    {text: "None of the above" , correct: false}
+                ]
+            },
+            {
+                question:"What is the correct HTML for creating a hyperlink ?",
+                answers:[
+                    {text: 'a url=http:example.com>Example /a' , correct:false},
+                    {text: "a href=http:example.com>Example /a" , correct: true},
+                    {text: "link href=http:example.com>Example /link" , correct: false},
+                    {text: "href=http:example.com>Example /" , correct: false}
+                ]
+            },
+            {
+                question:"Which tag is used to define an unordered list that is bulleted ?",
+                answers:[
+                    {text: "ol" , correct: false},
+                    {text: "li" , correct: false},
+                    {text: "ul" , correct: true},
+                    {text: "list" , correct: false}
+                ]
+            },
+            {
+                question:"What is the correct HTML for inserting an image ?",
+                answers:[
+                    {text: " image src=image.jpg alt=MyImage " , correct: false},
+                    {text: " img src=image.jpg alt=MyImage " , correct: true},
+                    {text: " img alt=MyImage>image.jpg /img" , correct: false},
+                    {text: " image src=image.jpg alt=MyImage " , correct: false}
+                ]
+            },
+            {
+                question:"Which HTML attribute is used to define inline styles ?",
+                answers:[
+                    {text: "styles" , correct: false},
+                    {text: "class" , correct: false},
+                    {text: "font" , correct: false},
+                    {text: "style" , correct: true}
+                ]
+            },
+            {
+                question:"Which CSS property is used to change the text color of an element ?",
+                answers:[
+                    {text: "text-color" , correct: false},
+                    {text: "color" , correct: true},
+                    {text: "font-color" , correct: false},
+                    {text: "text-style" , correct: false}
+                ]
+            },
+            {
+                question:"Which CSS property controls the space between the elements border and content ?",
+                answers:[
+                    {text: "margin" , correct: false},
+                    {text: "spacing" , correct: false},
+                    {text: "padding" , correct: true},
+                    {text: "border-spacing" , correct: false}
+                ]
+            },
+            {
+                question:"In CSS, what is the correct way to refer to an element with id : 'example' ?",
+                answers:[
+                    {text: "#example" , correct: true},
+                    {text: ".example" , correct: false},
+                    {text: "example" , correct: false},
+                    {text: "*example" , correct: false}
+                ]
+            },
+            {
+                question:"Which CSS property is used to make elements float?",
+                answers:[
+                    {text: "align" , correct: false},
+                    {text: "push" , correct: false},
+                    {text: "float" , correct: true},
+                    {text: "position" , correct: false}
+                ]
+            },
+            {
+                question:"Which CSS property is used to set the background color of an element ?",
+                answers:[
+                    {text: " background" , correct: false},
+                    {text: "background-color" , correct: true},
+                    {text: "bgcolor" , correct: false},
+                    {text: "color" , correct: false}
+                ]
+            },
+            {
+                question:"Which keyword is used to declare variables in JavaScript??",
+                answers:[
+                    {text: "let" , correct: true},
+                    {text: "variable" , correct: false},
+                    {text: "int" , correct: false},
+                    {text: "string" , correct: false}
+                ]
+            },
+            {
+                question:"How do you write 'Hello World' in an alert box using JavaScript ?",
+                answers:[
+                    {text: "msgBox('Hello World');" , correct: false},
+                    {text: "alertBox('Hello World');" , correct: false},
+                    {text: "msg('Hello World');" , correct: false},
+                    {text: "alert('Hello World');" , correct: true}
+                ]
+            },
+            {
+                question:"Which event occurs when the user clicks on an HTML element ?",
+                answers:[
+                    {text: "onmouseover" , correct: false},
+                    {text: "onclick" , correct: true},
+                    {text: "onchange" , correct: false},
+                    {text: "onmouseclick" , correct: false}
+                ]
+            },
+            {
+                question:"How do you declare a function named 'myFunction' in JavaScript ?",
+                answers:[
+                    {text: "function:myFunction()" , correct: false},
+                    {text: "function myFunction()" , correct: true},
+                    {text: "declare function myFunction()" , correct: false},
+                    {text: "def myFunction()" , correct: false}
+                ]
+            },
+            {
+                question:"How do you write an IF statement in JavaScript ?",
+                answers:[
+                    {text: "if (i == 5)" , correct: true},
+                    {text: "if i = 5" , correct: false},
+                    {text: "if i == 5" , correct: false},
+                    {text: "if i = 5 then" , correct: false}
+                ]
+            },
+            {
+                question:"Which class is used to create a basic button in Bootstrap ?",
+                answers:[
+                    {text: "btn-basic" , correct: false},
+                    {text: ".btn-primary" , correct: false},
+                    {text: ".btn-default" , correct: true},
+                    {text: ".btn-basic" , correct: false}
+                ]
+            },
+            {
+                question:"Which class is used to create a jumbotron in Bootstrap ?",
+                answers:[
+                    {text: ".jumbotron" , correct: true},
+                    {text: ".header" , correct: false},
+                    {text: ".hero" , correct: false},
+                    {text: ".big-box" , correct: false}
+                ]
+            },
+            {
+                question:"Which class is used to create a navigation bar in Bootstrap ?",
+                answers:[
+                    {text: ".nav" , correct: false},
+                    {text: ".navbar" , correct: true},
+                    {text: ".navigation" , correct: false},
+                    {text: ".navbar-nav" , correct: false}
+                ]
+            },
+            {
+                question:"Which class is used to create a container with a fixed width in Bootstrap ?",
+                answers:[
+                    {text: "container-fluid" , correct: false},
+                    {text: "container-full" , correct: false},
+                    {text: "container-fixed" , correct: false},
+                    {text: "container" , correct: true}
+                ]
+            },
+            {
+                question:"What is the grid system used in Bootstrap based on ?",
+                answers:[
+                    {text: " 12 columns" , correct: true},
+                    {text: "10 columns" , correct: false},
+                    {text: "16 columns" , correct: false},
+                    {text: "8 columns" , correct: false}
+                ]
+            }
+        ];
+        const questionElement  = document.getElementById("question");
+        const answerElements  = document.getElementById("ans-buttons");
+        const nextButton  = document.getElementById("nxt-btn");
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function startQuiz(){
+            currentQuestionIndex = 0;
+            score = 0;
+            nextButton.innerHTML = "Next";
+            showQuestion();
+        };
+        function showQuestion(){
+            resetState();
+            let currentQuestion = Questions[currentQuestionIndex];
+            let questionNo = currentQuestionIndex + 1;
+            questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+            currentQuestion.answers.forEach(answer => {
+                const button = document.createElement("button");
+                button.innerHTML = answer.text;
+                button.classList.add("btn");
+                answerElements.appendChild(button);
+                if(answer.correct){
+                    button.dataset.correct = answer.correct;
+                }
+                button.addEventListener("click", selectAnswer)
+            });
+        };
+
+        function resetState(){
+            nextButton.style.display = "none";
+            while(answerElements.firstChild){
+                answerElements.removeChild(answerElements.firstChild);
+            }
+        };
+
+        function selectAnswer(e){
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+            if(isCorrect){
+                selectedBtn.classList.add("correct");
+                score++;
+            }
+            else{
+                selectedBtn.classList.add("incorrect");
+            }
+            Array.from(answerElements.children).forEach(button => {
+                if(button.dataset.correct === "true"){
+                    button.classList.add("correct");
+                }
+                button.disabled = true;
+            });
+            nextButton.style.display = "block";
+        };
+        
+        function showScore(){
+            resetState();
+            questionElement.innerHTML = `You Scored ${score} out of ${Questions.length}!`;
+            nextButton.innerHTML = "Play Again";
+            nextButton.style.display = "block";
+        };
+
+        function handleNextButton(){
+            currentQuestionIndex++;
+            if(currentQuestionIndex < Questions.length){
+                showQuestion();
+            }
+            else{
+                showScore();
+            }
+        };
+
+        nextButton.addEventListener("click" ,()=>{
+            if(currentQuestionIndex < Questions.length){
+                handleNextButton();
+            }
+            else{
+                startQuiz();
+            }
+        });
+        
+        startQuiz();
+    </script>
+</body>
+</html>

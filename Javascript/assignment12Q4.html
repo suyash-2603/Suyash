@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+<body>
+    <script>
+        function getCombinations(string) {
+    let combinations = [];
+
+    function combine(prefix, remaining) {
+        for (let i = 0; i < remaining.length; i++) {
+            let newPrefix = prefix + remaining[i];
+            combinations.push(newPrefix);
+            combine(newPrefix, remaining.slice(i + 1));
+        }
+    }
+
+    combine('', string);
+    return combinations;
+}
+
+// Example usage:
+const string = "abc";
+const combinations = getCombinations(string);
+document.write(combinations);
+    </script>
+</body>
+</html>

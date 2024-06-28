@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <form>
+        <h1 align="center">Form</h1>
+        <label for="name">Enter your Name :</label>
+        <input type="text" name="name" id="data"><br><br>
+        <label for="age">Enter your Age:</label>
+        <input type="text" name="age" id="age"><br><br>
+        <label for="email">Enter your Email :</label>
+        <input type="text" name="email" id="edata"><br><br>
+        <select name="country" id="cty">
+            <option value="c">Select A country U Want to Travel</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="USA">USA</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+        </select><br><br>
+        <button id="b1" type="button">Click Here</button>   
+        <h2>Data</h2>
+        <h3 id="str1">Name</h3> 
+        <h3 id="str2">Age</h3> 
+        <h3 id="str3">Email</h3> 
+        <h3>You want to travel to: </h3> 
+        <h3 id="str4">_______</h3> 
+    </form>
+    <script>
+        var a,b,c,d;
+        document.querySelector("#b1").onclick = function(){
+            a  = document.querySelector("#data").value;
+            document.querySelector("#str1").textContent = a;
+            b  = document.querySelector("#age").value;
+            document.querySelector("#str2").textContent = b;
+            c  = document.querySelector("#edata").value;
+            document.querySelector("#str3").textContent = c;
+            d  = document.querySelector("#cty").value;
+            document.querySelector("#str4").textContent = d;
+        }
+    </script>
+</body>
+</html>

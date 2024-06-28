@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pattern</title>
+</head>
+<body>
+    <h1>Pattern</h1>
+    <button type="button" onclick="p1()">Click For Pattern 1</button>
+    <button type="button" onclick="p2()">Click For Pattern 2</button>
+    <button type="button" onclick="p3()">Click For Pattern 3</button>
+    <button type="button" onclick="p4()">Click For Pattern 4</button>
+    <button type="button" onclick="p5()">Click For Pattern 5</button>
+    <button type="button" onclick="p6()">Click For Pattern 6</button>
+    <script>
+        function p1(){
+            var i,j;
+            for(i=1;i<=4;i++){
+                for(j=1;j<=i;j++){
+                    document.write(j+" ");
+                }
+                document.write("<br>")
+            }
+        }
+        function p2(){
+            var i,j;
+            for(i=1;i<=4;i++){
+                for(j=1;j<=i;j++){
+                    document.write(i+" ");
+                }
+                document.write("<br>")
+            }
+        }
+        function p3(){
+            var i,j;
+            for(i=1;i<=4;i++){
+                for(j=1;j<=i;j++){
+                    document.write("* ");
+                }
+                document.write("<br>")
+            }
+        }
+         /*function p4(){
+            var i,j;
+            var k=1;
+            for(i=1;i<=4;i++){
+                for(j=1;j<=i;j++){
+                    document.write(k+" ");
+                    k++;
+                }
+                document.write("<br>")
+            }
+        }*/
+        function p5(){
+            var i,j;
+            var k = 1;
+            for(i=1;i<=5;i++){
+                for(j=5;j>=i;j--){
+                    document.write(" * ");
+                    //k++;
+                }
+                document.write("<br>")
+            }
+        }
+        function p6(){
+            var i,j;
+            var p = 1;
+            for(i=5;i>=1;i--){
+                for(j=1;j<i;j++){
+                    document.write("  ");
+                }
+                for(k=0;k<p;k++){
+                    document.write(" * ")
+                }
+                p++;
+                document.write("<br>")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 11</title>
+    <style>
+       .calc{
+        height : 375px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: rgb(50, 50, 50);
+       }
+       .screen{
+        margin-bottom: 10px;
+        margin-left: 40px;
+       }
+       .btns{
+        margin-left: 40px; 
+       }
+       .btns button{
+        height : 50px;
+        width : 50px;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        border-radius: 10px;
+        color: #efebeb;
+        background-color: rgb(43, 43, 43);
+       }
+       #equal{
+        width: 100px;
+        color: rgb(83, 163, 3);
+       }
+       #b1{
+        color: rgb(83, 163, 3);
+       }
+       #b2{
+        color: rgb(83, 163, 3);
+       }
+       #result {
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
+        text-align: right;
+        padding: 5px;
+        border: none;
+        margin-top: 10px;
+        color: aliceblue;
+        background-color: #222121;
+        border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="screen" >
+            <input type="text" id="result" readonly><br>
+        </div>
+        <div class="btns">
+            <button type="button" onclick="clearDisplay();" id="b1">AC</button>
+            <button type="button" onclick="deleteChar();" id="b2">DEL</button>
+            <button type="button" onclick="appendToDisplay('.')">.</button>
+            <button type="button" onclick="appendToDisplay('/')">/</button>
+        </div>
+        <div class="btns">
+            <button button type="button" onclick="appendToDisplay('7')">7</button>
+            <button button type="button" onclick="appendToDisplay('8')">8</button>
+            <button button type="button" onclick="appendToDisplay('9')">9</button>
+            <button button type="button" onclick="appendToDisplay('*')">*</button>
+        </div>
+        <div class="btns">
+            <button button type="button" onclick="appendToDisplay('4')">4</button>
+            <button button type="button" onclick="appendToDisplay('5')">5</button>
+            <button button type="button" onclick="appendToDisplay('6')">6</button>
+            <button button type="button" onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div class="btns">
+            <button button type="button" onclick="appendToDisplay('1')">1</button>
+            <button button type="button" onclick="appendToDisplay('2')">2</button>
+            <button button type="button" onclick="appendToDisplay('3')">3</button>
+            <button button type="button" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div class="btns">
+            <button button type="button" onclick="appendToDisplay('00')">00</button>
+            <button button type="button" onclick="appendToDisplay('0')">0</button>
+            <button button type="button" onclick="calculateResult()" id="equal">=</button>
+        </div>
+    </div>
+
+    <script>
+    let result = document.getElementById('result');
+    function appendToDisplay(value) {
+        result.value += value;
+    }
+    function clearDisplay() {
+        result.value = '';
+    }
+    function deleteChar() {
+        result.value = result.value.slice(0, -1);
+    }
+    function calculateResult() {
+        try {
+            result.value = eval(result.value);
+        } catch (error) {
+            result.value = 'Error';
+        }
+    }
+    </script>
+</body>
+</html>

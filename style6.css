@@ -1,0 +1,30 @@
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(223, 76, 9);
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(37, 144, 245);
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+img{
+    height: 400px;
+    width: 700px;
+}
+@media screen and (max-device-width:800px) and (min-device-width:200px){
+ p{
+    font-size: 10px;
+    color: chocolate;
+ }
+}
+@media screen and (max-device-width:800px) and (min-device-width:200px) {
+    h1{
+        font-size:35px;
+        color: chartreuse;
+    }
+    
+}

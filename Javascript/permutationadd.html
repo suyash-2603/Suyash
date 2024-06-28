@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutation addition</title>
+</head>
+<body>
+    <h1>Permutation addition</h1>
+    <button type="button" onclick="permutation()">Click here</button>
+    <script>
+        function permutation(){
+            var n = parseInt(prompt("Enter value of 'n':"));
+            var r = parseInt(prompt("Enter value of 'r':"));
+            var sum = 0;
+            var permute;
+            while(r>=0){
+                permute = Factorial(n) / Factorial(n-r);
+                sum = sum + permute;
+                r--;
+            }
+            document.write("Addition of Permutation:" + sum);
+        }
+        function Factorial(number){
+        var fact = 1;
+         var temp = number
+        while(temp!=0){
+         fact = fact * temp;
+         temp--;   
+        }
+        return fact;
+        }
+    </script>
+</body>
+</html>

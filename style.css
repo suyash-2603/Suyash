@@ -1,0 +1,33 @@
+*{
+    background-color:grey;
+}
+h2{
+    background-color:blueviolet ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+div{
+    font-size: 20px;
+    margin: 0;
+    height: 100;
+    padding: 10px;
+    border: 90%;
+}
+.xyz{
+    height: 150px;
+    width: 200px;
+}
+.t1{
+    background-color: wheat;
+}
+.t2{
+    background-color:pink;
+}
+footer{
+    color: blue;
+}
+.x h1{
+    color: brown;
+}
+.x h3{
+    color: aliceblue;
+}

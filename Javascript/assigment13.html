@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Patterns</h1>
+    <button type="button" onclick="p1()">Pattern 1</button>
+    <button type="button" onclick="p2()">Pattern 2</button>
+    <button type="button" onclick="p3()">Pattern 3</button>
+    <button type="button" onclick="p4()">Pattern 4</button>
+    <script>
+        function p1() {
+            let space = "&ensp;";
+            let n = parseInt(prompt("Enter a number:"));
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < (n - i) * 2 - 1; j++) {
+                    document.write(space);
+                }
+                for (let k = 0; k < i * 2 + 1; k++) {
+                    document.write("*&ensp;")
+                }
+                document.write("<br>")
+            }
+        }
+        function p2() {
+            let space = "&ensp;";
+            let n = parseInt(prompt("Enter a number:"));
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < i * 2 - 1; j++) {
+                    document.write(space);
+                }
+                for (let k = 0; k < (n - i) * 2 - 1; k++) {
+                    document.write("*&ensp;")
+                }
+                document.write("<br>")
+            }
+        }
+        function p3() {
+            var i, j;
+            for (i = 1; i <= 5; i++) {
+                for (j = 1; j <= i; j++) {
+                    document.write("  *  ");
+                }
+                document.write("<br>")
+            }
+            for (i = 1; i <= 4; i++) {
+                for (j = 4; j >= i; j--) {
+                    document.write("  *  ");
+                }
+                document.write("<br>")
+            }
+        }
+        function p4() {
+            let n = parseInt(prompt('Enter any number'));
+            for (i = 1; i <= n; i++) {
+                for (let k = 0; k <= 2 * (n - i) - 1; k++) {
+                    document.write("&ensp;");
+                }
+                for (let j = 1; j <= i; j++) {
+                    document.write("*&ensp;");
+                }
+                document.write("<br>");
+            }
+            for (i = 1; i < n; i++) {
+                for (let k = 0; k < 2 * i; k++) {
+                    document.write("&ensp;");
+                }
+                for (let j = 0; j < n - i; j++) {
+                    document.write("*&ensp;");
+                }
+                document.write("<br>");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

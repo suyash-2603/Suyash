@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Armstrong Loop</title>
+</head>
+<body>
+    <h1>Armstrong Loop</h1>
+    <button type="button" onclick="Armstrong()">Click Here !</button>
+
+    <script>
+        function Armstrong(){
+            var range;
+            var sum = 0;
+            range = prompt("Enter a number:");
+            range = parseInt(range);
+            for(i=1;i<=range;i++){
+                var num =parseInt(i);
+                while (num != 0) 
+                {
+                var r = num % 10;
+                num = parseInt(num / 10);
+                sum = sum + (r * r * r);
+                }
+                if (sum == i) 
+                {
+                    document.write(i + "<br>");
+                }
+            } 
+        }
+    </script>
+</body>
+</html>

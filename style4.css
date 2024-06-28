@@ -1,0 +1,26 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    height: 3vw;
+    width: 308px;
+    background-color: goldenrod;
+    color: white;
+}
+input{
+    height: 3vw;
+    width: 300px;  
+}
+.f1{
+    width:70%;
+    background-color: black;
+    color: white;
+}
+.f2{
+    width:70%;
+    padding: 6px;
+    background-color: rgb(94, 93, 93);
+    color: white;
+}
+

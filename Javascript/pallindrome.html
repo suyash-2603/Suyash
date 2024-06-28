@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Pallindrome</title>
+</head>
+<body>
+    <h1>Pallindrome of number</h1>
+    <button type="button" onclick="pallindrome()">click here</button>
+
+    <script>
+        function pallindrome(){
+            var num;
+        var sum = 0;
+        num = prompt("Enter a number:");
+        var n1 = num;
+        while(n1!=0){
+            var r = n1%10;
+            sum = (sum * 10) + r;
+            n1 = parseInt(n1/10);
+        }
+        if(sum==num){
+            document.write(num+" is a pallindrome number.");
+        }
+        else{
+            document.write(num+" is not a pallindrome number.");
+        }
+        }
+    </script>
+</body>
+</html>

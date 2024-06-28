@@ -1,0 +1,71 @@
+img{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    animation: rotate 1000ms ease-in-out infinite;
+    background-attachment: fixed;
+
+
+}
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0);
+    }
+    25%{
+        transform: rotateZ(90deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    75%{
+        transform: rotateZ(270deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: firebrick;
+    animation: clrchg 2s ease-in-out infinite;
+}
+@keyframes clrchg {
+    0%   {
+        background-color:red; 
+        transform: rotateZ(0) ;
+    }
+    25%  {
+        background-color:yellow; 
+        transform: rotateZ(90deg) ;
+    }
+    50%  {
+        background-color:blue; 
+        transform: rotateZ(180deg) ;
+    }
+    75%  {
+        background-color:green; 
+        transform: rotateZ(270deg) ;
+    }
+    100% {
+        background-color:red; 
+        transform: rotateZ(360deg) ;
+    }
+}
+.card contanier{
+            background-color: aqua;
+            padding: 0;
+            margin: 10px;
+}
+button{
+        background-color:red;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 10px;
+        border-color: aqua;
+        
+}
+button:hover{
+    background-color: yellow;
+    
+}
